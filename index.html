@@ -1,218 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Anniversary Dear Wifey ❤️</title>
 
-<meta property="og:title" content="❤️ A Special Surprise For Dear Wifey ❤️">
-<meta property="og:description" content="A Love Letter From Shadab ❤️">
+<meta property="og:title" content="❤️ Happy Anniversary Dear Wifey ❤️">
 <meta property="og:image" content="cover.jpg">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
-
 body{
-background:#000;
-color:#fff;
-overflow-x:hidden;
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
 }
 
-.page{
-display:none;
-}
-
-#intro{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#ff4d79,#7a004d);
-padding:20px;
+#start{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#ff4d79,#8b005d);
 }
 
 .envelope{
-font-size:120px;
-animation:float 2s infinite;
-}
-
-@keyframes float{
-50%{transform:translateY(-15px);}
+    font-size:120px;
 }
 
 button{
-padding:15px 35px;
-border:none;
-border-radius:30px;
-background:#fff;
-color:#e91e63;
-font-size:18px;
-cursor:pointer;
-margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+#content{
+    display:none;
 }
 
 .hero{
-height:100vh;
-background:url('cover.jpg') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
+    background:url('cover.jpg') center/cover no-repeat;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.5);
+.hero h1{
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
 }
 
-.heroText{
-z-index:1;
-text-align:center;
-padding:20px;
-}
-
-.heroText h1{
-font-size:50px;
+#photo{
+    width:90%;
+    max-width:700px;
+    border-radius:20px;
+    margin:20px auto;
+    display:block;
 }
 
 .message{
-padding:40px 25px;
-max-width:900px;
-margin:auto;
-line-height:1.9;
-font-size:22px;
-text-align:center;
-}
-
-.slideshow{
-display:flex;
-justify-content:center;
-padding:20px;
-}
-
-.slideshow img{
-width:90%;
-max-width:700px;
-border-radius:20px;
-box-shadow:0 0 30px rgba(255,255,255,.3);
-}
-
-.final{
-padding:60px 20px;
-text-align:center;
-font-size:25px;
+    padding:25px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:20px;
 }
 
 .heart{
-position:fixed;
-top:-50px;
-color:#ff4d79;
-animation:fall linear forwards;
-pointer-events:none;
+    position:fixed;
+    top:-20px;
+    color:red;
+    animation:fall linear forwards;
 }
 
 @keyframes fall{
-to{
-transform:translateY(110vh);
-opacity:0;
-}
-}
-
-@media(max-width:768px){
-
-.heroText h1{
-font-size:34px;
-}
-
-.message{
-font-size:18px;
-}
-
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<audio id="music" controls style="display:none">
-<source src="song.mp3" type="audio/mpeg">
+<audio id="music" controls>
+    <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="intro">
+<div id="start">
 
 <div class="envelope">💌</div>
 
 <h1>Dear Wifey ❤️</h1>
 
-<p>A Special Anniversary Letter From Shadab</p>
-
-<button onclick="startLoveStory()">
+<button onclick="openCard()">
 Open My Heart ❤️
 </button>
 
 </div>
 
-<div id="main" class="page">
+<div id="content">
 
 <div class="hero">
-
-<div class="heroText">
-
-<h1>Happy Anniversary ❤️</h1>
-
-<h2>9 November 2026</h2>
-
-</div>
-
+<h1>
+Happy Anniversary ❤️<br>
+9 November 2026
+</h1>
 </div>
 
 <div class="message">
 
 <h2>My Dear Wifey ❤️</h2>
 
-<br>
-
-Every beautiful memory we have shared
-has become a treasure in my heart.
+<p>
+Every beautiful memory we have shared has become a treasure in my heart.
 
 <br><br>
 
-You are not just my wife.
-
-You are my best friend,
-my strength,
-my peace,
-and the most beautiful blessing in my life.
+You are not just my wife, you are my best friend, my strength, my peace and the most beautiful blessing in my life.
 
 <br><br>
 
-Through every smile,
-every challenge,
-every prayer
-and every dream,
-you have made my life more meaningful.
+Through every smile, every challenge, every prayer and every dream, you have made my life more meaningful.
 
 <br><br>
 
-If I had the chance to choose again,
-I would still choose you.
+If I had the chance to choose again, I would still choose you.
 
-In every lifetime.
+<br><br>
 
-In every universe.
-
+In every lifetime.<br>
+In every universe.<br>
 Every single time.
 
 <br><br>
@@ -225,4 +151,82 @@ Forever Yours,
 
 <br><br>
 
-<b>
+<b>Mohd. Shadab ❤️</b>
+</p>
+
+</div>
+
+<img id="photo" src="photo1.jpg">
+
+</div>
+
+<script>
+
+let photos = [
+'photo1.jpg',
+'photo2.jpg',
+'photo3.jpg',
+'photo4.jpg',
+'photo5.jpg',
+'photo6.jpg',
+'photo7.jpg',
+'photo8.jpg',
+'photo9.jpg',
+'photo10.jpg',
+'photo11.jpg',
+'photo12.jpg',
+'photo13.jpg',
+'photo14.jpg'
+];
+
+let current = 0;
+
+function openCard(){
+
+document.getElementById('start').style.display='none';
+document.getElementById('content').style.display='block';
+
+document.getElementById('music').play();
+
+}
+
+setInterval(function(){
+
+current++;
+
+if(current >= photos.length){
+current = 0;
+}
+
+document.getElementById('photo').src = photos[current];
+
+},3000);
+
+function createHeart(){
+
+let h = document.createElement('div');
+
+h.className='heart';
+
+h.innerHTML='❤️';
+
+h.style.left=Math.random()*100+'vw';
+
+h.style.fontSize=(20+Math.random()*20)+'px';
+
+h.style.animationDuration=(3+Math.random()*5)+'s';
+
+document.body.appendChild(h);
+
+setTimeout(function(){
+h.remove();
+},8000);
+
+}
+
+setInterval(createHeart,400);
+
+</script>
+
+</body>
+</html>
