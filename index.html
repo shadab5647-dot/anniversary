@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Anniversary Dear Wifey ❤️</title>
 
-<meta property="og:title"
-content="❤️ A Special Anniversary Surprise For Dear Wifey ❤️">
-
-<meta property="og:description"
-content="A Love Letter From Shadab ❤️">
-
-<meta property="og:image"
-content="cover.jpg">
-
-<meta property="og:type"
-content="website">
+<meta property="og:title" content="❤️ A Special Surprise For Dear Wifey ❤️">
+<meta property="og:description" content="A Love Letter From Shadab ❤️">
+<meta property="og:image" content="cover.jpg">
 
 <style>
 
@@ -25,219 +16,155 @@ content="website">
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
-overflow:hidden;
-background:black;
-color:white;
-height:100vh;
+background:#000;
+color:#fff;
+overflow-x:hidden;
 }
 
-.screen{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+.page{
+display:none;
+}
+
+#intro{
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#ff4d79,#7a004d);
 padding:20px;
-}
-
-#envelopeScreen{
-background:
-linear-gradient(135deg,#220022,#000000);
-z-index:100;
 }
 
 .envelope{
 font-size:120px;
-animation:float 2s infinite ease-in-out;
-cursor:pointer;
+animation:float 2s infinite;
 }
 
 @keyframes float{
-50%{
-transform:translateY(-10px);
-}
+50%{transform:translateY(-15px);}
 }
 
-#mainContent{
-display:none;
-overflow:auto;
-background:
-linear-gradient(to bottom,
-#120018,
-#000000,
-#120018);
+button{
+padding:15px 35px;
+border:none;
+border-radius:30px;
+background:#fff;
+color:#e91e63;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
 }
 
 .hero{
 height:100vh;
-width:100%;
-background:
-url('cover.jpg.jpeg')
-center center/cover no-repeat;
+background:url('cover.jpg') center/cover;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 position:relative;
 }
 
 .hero::before{
-content:'';
+content:"";
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.55);
+background:rgba(0,0,0,.5);
 }
 
 .heroText{
-position:relative;
-z-index:2;
+z-index:1;
+text-align:center;
 padding:20px;
 }
 
 .heroText h1{
-font-size:44px;
-}
-
-.heroText h2{
-margin-top:15px;
-font-weight:300;
-}
-
-.section{
-padding:30px;
-max-width:900px;
-margin:auto;
-line-height:2;
-font-size:20px;
-}
-
-.slideshow{
-width:100%;
-max-width:800px;
-margin:20px auto;
-}
-
-.slideshow img{
-width:100%;
-border-radius:20px;
-box-shadow:
-0 0 25px rgba(255,255,255,.2);
-}
-
-.final{
-height:100vh;
-background:
-url('photo1.jpg.jpeg')
-center center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-}
-
-.final::before{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
-}
-
-.finalText{
-z-index:2;
-position:relative;
-padding:20px;
-}
-
-.finalText h1{
 font-size:50px;
 }
 
-.finalText h2{
-margin-top:20px;
+.message{
+padding:40px 25px;
+max-width:900px;
+margin:auto;
+line-height:1.9;
+font-size:22px;
+text-align:center;
+}
+
+.slideshow{
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+.slideshow img{
+width:90%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,255,255,.3);
+}
+
+.final{
+padding:60px 20px;
+text-align:center;
+font-size:25px;
 }
 
 .heart{
 position:fixed;
-color:#ff3b6a;
+top:-50px;
+color:#ff4d79;
 animation:fall linear forwards;
 pointer-events:none;
 }
 
 @keyframes fall{
-from{
-transform:translateY(-50px);
-opacity:1;
-}
 to{
-transform:translateY(100vh);
+transform:translateY(110vh);
 opacity:0;
 }
-}
-
-.openBtn{
-padding:15px 35px;
-border:none;
-background:#ff4081;
-color:white;
-font-size:18px;
-border-radius:40px;
-margin-top:20px;
-cursor:pointer;
 }
 
 @media(max-width:768px){
 
 .heroText h1{
-font-size:32px;
+font-size:34px;
 }
 
-.section{
+.message{
 font-size:18px;
 }
 
-.finalText h1{
-font-size:34px;
 }
-}
-
 </style>
 </head>
 
 <body>
 
-<audio id="bgmusic" loop>
+<audio id="music" controls style="display:none">
 <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="envelopeScreen" class="screen">
+<div id="intro">
 
 <div class="envelope">💌</div>
 
 <h1>Dear Wifey ❤️</h1>
 
-<h3>A Letter From Shadab</h3>
+<p>A Special Anniversary Letter From Shadab</p>
 
-<button class="openBtn"
-onclick="openCard()">
-
+<button onclick="startLoveStory()">
 Open My Heart ❤️
-
 </button>
 
 </div>
 
-<div id="mainContent">
+<div id="main" class="page">
 
 <div class="hero">
 
@@ -251,58 +178,40 @@ Open My Heart ❤️
 
 </div>
 
-<div class="section">
+<div class="message">
 
 <h2>My Dear Wifey ❤️</h2>
 
 <br>
 
-<p>
-
-Every beautiful memory that we have created together
+Every beautiful memory we have shared
 has become a treasure in my heart.
-
-<br><br>
-
-Through every smile, every challenge, every prayer
-and every dream, you have been the most wonderful
-part of my journey.
 
 <br><br>
 
 You are not just my wife.
 
-<br><br>
-
-You are the calm in my storms,
-the happiness in my celebrations,
-and the strength behind my courage.
-
-<br><br>
-
-Thank you for believing in me,
-supporting me and standing beside me
-through every season of life.
+You are my best friend,
+my strength,
+my peace,
+and the most beautiful blessing in my life.
 
 <br><br>
 
-Today as we celebrate another year together,
-I want you to know one thing.
+Through every smile,
+every challenge,
+every prayer
+and every dream,
+you have made my life more meaningful.
 
 <br><br>
 
 If I had the chance to choose again,
 I would still choose you.
 
-<br><br>
-
 In every lifetime.
 
-<br><br>
-
 In every universe.
-
-<br><br>
 
 Every single time.
 
@@ -316,127 +225,4 @@ Forever Yours,
 
 <br><br>
 
-<b>Mohd. Shadab ❤️</b>
-
-</p>
-
-</div>
-
-<div class="slideshow">
-
-<img id="slide"
-src="photo1.jpg.jpeg">
-
-</div>
-
-<div class="final">
-
-<div class="finalText">
-
-<h1>
-Happy Anniversary
-</h1>
-
-<h2>
-Dear Wifey ❤️
-</h2>
-
-<br>
-
-<h2>
-You Are My Today,<br>
-My Tomorrow,<br>
-And My Forever.
-</h2>
-
-<br>
-
-<h3>
-Forever Yours,
-<br>
-Mohd. Shadab ❤️
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function openCard(){
-
-document.getElementById(
-'envelopeScreen'
-).style.display='none';
-
-document.getElementById(
-'mainContent'
-).style.display='block';
-
-document.getElementById(
-'bgmusic'
-).play();
-
-}
-
-const photos=[
-'photo1.jpg.jpeg',
-'photo2.jpg.jpeg',
-'photo3.jpg.jpeg',
-'photo4.jpg.jpeg',
-'photo5.jpg.jpeg',
-'photo6.jpg.jpeg',
-'photo7.jpg.jpeg',
-'photo8.jpg.jpeg',
-'photo9.jpg.jpeg'
-];
-
-let current=0;
-
-setInterval(()=>{
-
-current++;
-
-if(current>=photos.length)
-current=0;
-
-document.getElementById(
-'slide'
-).src=photos[current];
-
-},4000);
-
-function heart(){
-
-const h=
-document.createElement('div');
-
-h.className='heart';
-
-h.innerHTML='❤️';
-
-h.style.left=
-Math.random()*100+'vw';
-
-h.style.fontSize=
-(15+Math.random()*25)+'px';
-
-h.style.animationDuration=
-(4+Math.random()*4)+'s';
-
-document.body.appendChild(h);
-
-setTimeout(()=>{
-h.remove();
-},8000);
-
-}
-
-setInterval(heart,300);
-
-</script>
-
-</body>
-</html>
+<b>
