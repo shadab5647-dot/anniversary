@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Happy Anniversary Dear Wifey ❤️</title>
 
+<meta property="og:title"
+content="❤️ A Special Anniversary Surprise For Dear Wifey ❤️">
+
+<meta property="og:description"
+content="A Love Letter From Shadab ❤️">
+
+<meta property="og:image"
+content="cover.jpg">
+
+<meta property="og:type"
+content="website">
+
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,99 +30,153 @@ font-family:'Segoe UI',sans-serif;
 
 body{
 overflow:hidden;
+background:black;
+color:white;
 height:100vh;
+}
+
+.screen{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+#envelopeScreen{
+background:
+linear-gradient(135deg,#220022,#000000);
+z-index:100;
+}
+
+.envelope{
+font-size:120px;
+animation:float 2s infinite ease-in-out;
+cursor:pointer;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-10px);
+}
+}
+
+#mainContent{
+display:none;
+overflow:auto;
+background:
+linear-gradient(to bottom,
+#120018,
+#000000,
+#120018);
+}
+
+.hero{
+height:100vh;
+width:100%;
+background:
+url('cover.jpg')
+center center/cover no-repeat;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(-45deg,#ff6b81,#ff758c,#ff9a9e,#fad0c4);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
+position:relative;
 }
 
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
 }
 
-.container{
-width:92%;
-max-width:850px;
-padding:40px;
-text-align:center;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
-border-radius:25px;
-box-shadow:0 10px 40px rgba(0,0,0,.20);
-color:white;
-animation:fadeIn 2s ease;
-z-index:10;
+.heroText{
+position:relative;
+z-index:2;
+padding:20px;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:scale(.8);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
+.heroText h1{
+font-size:44px;
 }
 
-h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-h2{
-margin-bottom:20px;
-font-weight:400;
-}
-
-.message{
-font-size:1.2rem;
-line-height:1.9;
-margin:25px 0;
-}
-
-.date{
-font-size:1rem;
-opacity:.9;
+.heroText h2{
 margin-top:15px;
+font-weight:300;
 }
 
-.signature{
-margin-top:25px;
-font-size:1.4rem;
-font-weight:bold;
+.section{
+padding:30px;
+max-width:900px;
+margin:auto;
+line-height:2;
+font-size:20px;
 }
 
-button{
+.slideshow{
+width:100%;
+max-width:800px;
+margin:20px auto;
+}
+
+.slideshow img{
+width:100%;
+border-radius:20px;
+box-shadow:
+0 0 25px rgba(255,255,255,.2);
+}
+
+.final{
+height:100vh;
+background:
+url('photo1.jpg')
+center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.final::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+}
+
+.finalText{
+z-index:2;
+position:relative;
+padding:20px;
+}
+
+.finalText h1{
+font-size:50px;
+}
+
+.finalText h2{
 margin-top:20px;
-padding:12px 25px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-font-weight:bold;
-background:white;
-color:#ff4f81;
-}
-
-button:hover{
-transform:scale(1.05);
 }
 
 .heart{
-position:absolute;
-color:red;
+position:fixed;
+color:#ff3b6a;
 animation:fall linear forwards;
+pointer-events:none;
 }
 
 @keyframes fall{
 from{
-transform:translateY(-100px);
+transform:translateY(-50px);
 opacity:1;
 }
 to{
@@ -116,105 +185,256 @@ opacity:0;
 }
 }
 
-#welcome{
-position:absolute;
-inset:0;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#ff4f81;
+.openBtn{
+padding:15px 35px;
+border:none;
+background:#ff4081;
 color:white;
-font-size:2rem;
-font-weight:bold;
-z-index:100;
-animation:hideWelcome 4s forwards;
+font-size:18px;
+border-radius:40px;
+margin-top:20px;
+cursor:pointer;
 }
 
-@keyframes hideWelcome{
-0%,75%{
-opacity:1;
+@media(max-width:768px){
+
+.heroText h1{
+font-size:32px;
 }
-100%{
-opacity:0;
-visibility:hidden;
+
+.section{
+font-size:18px;
+}
+
+.finalText h1{
+font-size:34px;
 }
 }
+
 </style>
 </head>
 
 <body>
 
-<div id="welcome">
-❤️ A Special Message For Dear Wifey ❤️
+<audio id="bgmusic" loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="envelopeScreen" class="screen">
+
+<div class="envelope">💌</div>
+
+<h1>Dear Wifey ❤️</h1>
+
+<h3>A Letter From Shadab</h3>
+
+<button class="openBtn"
+onclick="openCard()">
+
+Open My Heart ❤️
+
+</button>
+
 </div>
 
-<div class="container">
+<div id="mainContent">
+
+<div class="hero">
+
+<div class="heroText">
 
 <h1>Happy Anniversary ❤️</h1>
 
-<h2>My Dear Wifey,</h2>
-
-<div class="message">
-
-Today isn't just another date on the calendar.
-
-It's a celebration of every smile we've shared, every challenge we've overcome, and every beautiful memory we've created together.
-
-You have filled my life with happiness, warmth, love and purpose. Your presence makes ordinary days extraordinary, and your love gives me strength in every moment.
-
-Thank you for being my best friend, my biggest supporter, and the most precious blessing in my life.
-
-As we celebrate another year together, I want you to know that my love for you grows stronger with every passing day.
-
-No matter where life takes us, my heart will always choose you.
-
-Forever. Always. Endlessly. ❤️
+<h2>9 November 2026</h2>
 
 </div>
 
-<div class="date">
-9 November 2026
 </div>
 
-<div class="signature">
-With All My Love,<br>
-❤️ Husband ❤️
+<div class="section">
+
+<h2>My Dear Wifey ❤️</h2>
+
+<br>
+
+<p>
+
+Every beautiful memory that we have created together
+has become a treasure in my heart.
+
+<br><br>
+
+Through every smile, every challenge, every prayer
+and every dream, you have been the most wonderful
+part of my journey.
+
+<br><br>
+
+You are not just my wife.
+
+<br><br>
+
+You are the calm in my storms,
+the happiness in my celebrations,
+and the strength behind my courage.
+
+<br><br>
+
+Thank you for believing in me,
+supporting me and standing beside me
+through every season of life.
+
+<br><br>
+
+Today as we celebrate another year together,
+I want you to know one thing.
+
+<br><br>
+
+If I had the chance to choose again,
+I would still choose you.
+
+<br><br>
+
+In every lifetime.
+
+<br><br>
+
+In every universe.
+
+<br><br>
+
+Every single time.
+
+<br><br>
+
+Happy Anniversary My Love ❤️
+
+<br><br>
+
+Forever Yours,
+
+<br><br>
+
+<b>Mohd. Shadab ❤️</b>
+
+</p>
+
 </div>
 
-<button onclick="showMessage()">
-Click for a Surprise ❤️
-</button>
+<div class="slideshow">
 
-<h2 id="surprise" style="margin-top:25px;"></h2>
+<img id="slide"
+src="photo1.jpg">
+
+</div>
+
+<div class="final">
+
+<div class="finalText">
+
+<h1>
+Happy Anniversary
+</h1>
+
+<h2>
+Dear Wifey ❤️
+</h2>
+
+<br>
+
+<h2>
+You Are My Today,<br>
+My Tomorrow,<br>
+And My Forever.
+</h2>
+
+<br>
+
+<h3>
+Forever Yours,
+<br>
+Mohd. Shadab ❤️
+</h3>
+
+</div>
+
+</div>
 
 </div>
 
 <script>
 
-function showMessage(){
-document.getElementById("surprise").innerHTML=
-"You Are My Today, My Tomorrow & My Forever ❤️";
+function openCard(){
+
+document.getElementById(
+'envelopeScreen'
+).style.display='none';
+
+document.getElementById(
+'mainContent'
+).style.display='block';
+
+document.getElementById(
+'bgmusic'
+).play();
+
 }
 
-function createHeart(){
+const photos=[
+'photo1.jpg',
+'photo2.jpg',
+'photo3.jpg',
+'photo4.jpg',
+'photo5.jpg',
+'photo6.jpg',
+'photo7.jpg',
+'photo8.jpg',
+'photo9.jpg'
+];
 
-const heart=document.createElement("div");
+let current=0;
 
-heart.className="heart";
-heart.innerHTML="❤️";
+setInterval(()=>{
 
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(15+Math.random()*30)+"px";
-heart.style.animationDuration=(4+Math.random()*5)+"s";
+current++;
 
-document.body.appendChild(heart);
+if(current>=photos.length)
+current=0;
+
+document.getElementById(
+'slide'
+).src=photos[current];
+
+},4000);
+
+function heart(){
+
+const h=
+document.createElement('div');
+
+h.className='heart';
+
+h.innerHTML='❤️';
+
+h.style.left=
+Math.random()*100+'vw';
+
+h.style.fontSize=
+(15+Math.random()*25)+'px';
+
+h.style.animationDuration=
+(4+Math.random()*4)+'s';
+
+document.body.appendChild(h);
 
 setTimeout(()=>{
-heart.remove();
-},9000);
+h.remove();
+},8000);
+
 }
 
-setInterval(createHeart,250);
+setInterval(heart,300);
 
 </script>
 
