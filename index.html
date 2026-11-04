@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary Dear Wifey ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff6b81,#ff758c,#ff9a9e,#fad0c4);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:92%;
+max-width:850px;
+padding:40px;
+text-align:center;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+border-radius:25px;
+box-shadow:0 10px 40px rgba(0,0,0,.20);
+color:white;
+animation:fadeIn 2s ease;
+z-index:10;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+h2{
+margin-bottom:20px;
+font-weight:400;
+}
+
+.message{
+font-size:1.2rem;
+line-height:1.9;
+margin:25px 0;
+}
+
+.date{
+font-size:1rem;
+opacity:.9;
+margin-top:15px;
+}
+
+.signature{
+margin-top:25px;
+font-size:1.4rem;
+font-weight:bold;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+font-weight:bold;
+background:white;
+color:#ff4f81;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.heart{
+position:absolute;
+color:red;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-100px);
+opacity:1;
+}
+to{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+
+#welcome{
+position:absolute;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ff4f81;
+color:white;
+font-size:2rem;
+font-weight:bold;
+z-index:100;
+animation:hideWelcome 4s forwards;
+}
+
+@keyframes hideWelcome{
+0%,75%{
+opacity:1;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="welcome">
+❤️ A Special Message For Dear Wifey ❤️
+</div>
+
+<div class="container">
+
+<h1>Happy Anniversary ❤️</h1>
+
+<h2>My Dear Wifey,</h2>
+
+<div class="message">
+
+Today isn't just another date on the calendar.
+
+It's a celebration of every smile we've shared, every challenge we've overcome, and every beautiful memory we've created together.
+
+You have filled my life with happiness, warmth, love and purpose. Your presence makes ordinary days extraordinary, and your love gives me strength in every moment.
+
+Thank you for being my best friend, my biggest supporter, and the most precious blessing in my life.
+
+As we celebrate another year together, I want you to know that my love for you grows stronger with every passing day.
+
+No matter where life takes us, my heart will always choose you.
+
+Forever. Always. Endlessly. ❤️
+
+</div>
+
+<div class="date">
+9 November 2026
+</div>
+
+<div class="signature">
+With All My Love,<br>
+❤️ Husband ❤️
+</div>
+
+<button onclick="showMessage()">
+Click for a Surprise ❤️
+</button>
+
+<h2 id="surprise" style="margin-top:25px;"></h2>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("surprise").innerHTML=
+"You Are My Today, My Tomorrow & My Forever ❤️";
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*30)+"px";
+heart.style.animationDuration=(4+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
