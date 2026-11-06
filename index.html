@@ -4,166 +4,239 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Anniversary Dear Wifey ❤️</title>
+<title>Happy Anniversary Second Anniverasy Dear Wifey ❤️</title>
 
-<meta property="og:title" content="❤️ Happy Anniversary Dear Wifey ❤️">
+<meta property="og:title" content="❤️ A Special Anniversary Surprise For Dear Wifey ❤️">
+<meta property="og:description" content="A Love Letter From Shadab ❤️">
 <meta property="og:image" content="cover.jpg">
 
 <style>
-body{
+
+*{
 margin:0;
-background:#000;
-color:white;
-overflow:hidden;
-height:100vh;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
+body{
+overflow:hidden;
+height:100vh;
+background:#000;
+color:white;
+}
 
-#start{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#ff4d79,#8b005d);
+#intro,
+#story{
+height:100vh;
+width:100vw;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+#intro{
+background:linear-gradient(135deg,#ff4d6d,#4a044e);
 }
 
 .envelope{
-    font-size:120px;
+font-size:110px;
+animation:float 2.5s infinite ease-in-out;
 }
 
-button{
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    font-size:18px;
-    cursor:pointer;
-    margin-top:20px;
+@keyframes float{
+50%{
+transform:translateY(-15px);
+}
 }
 
-#content{
-    display:none;
+.openBtn{
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:white;
+color:#e91e63;
+cursor:pointer;
+font-weight:bold;
 }
 
-.hero{
-    background:url('cover.jpg') center/cover no-repeat;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+#story{
+display:none;
+background-size:cover;
+background-position:center;
+transition:background-image 1s ease-in-out;
 }
 
-.hero h1{
-    background:rgba(0,0,0,0.5);
-    padding:20px;
-    border-radius:10px;
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
 }
 
-#photo{
-    width:90%;
-    max-width:700px;
-    border-radius:20px;
-    margin:20px auto;
-    display:block;
+.content{
+position:relative;
+z-index:5;
+padding:20px;
+max-width:90%;
 }
 
-.message{
-    padding:25px;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    font-size:20px;
+h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+#message{
+font-size:22px;
+line-height:1.6;
+min-height:140px;
+}
+
+.signature{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
 }
 
 .heart{
-    position:fixed;
-    top:-20px;
-    color:red;
-    animation:fall linear forwards;
+position:absolute;
+color:#ff4d6d;
+pointer-events:none;
+animation:fall linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh);
-        opacity:0;
-    }
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+.finalScreen{
+position:absolute;
+inset:0;
+display:none;
+background:rgba(0,0,0,.85);
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+z-index:100;
+}
+
+.finalScreen h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.finalScreen p{
+font-size:24px;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:30px;
+}
+
+#message{
+font-size:20px;
+}
+
+.finalScreen h1{
+font-size:30px;
+}
+
+.finalScreen p{
+font-size:20px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
-<audio id="music" controls>
-    <source src="song.mp3" type="audio/mpeg">
+<audio id="music">
+<source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="start">
+<div id="intro">
 
 <div class="envelope">💌</div>
 
 <h1>Dear Wifey ❤️</h1>
 
-<button onclick="openCard()">
-Open My Heart ❤️ for surprise !!
+<p>A Special Anniversary Letter From Shadab</p>
+
+<button class="openBtn" onclick="startStory()">
+Open My Heart ❤️
 </button>
 
 </div>
 
-<div id="content">
+<div id="story">
 
-<div class="hero">
-<h1>
-Happy Second Anniversary ❤️<br>
-9 November 2026
-</h1>
+<div class="overlay"></div>
+
+<div class="content">
+
+<h1>Happy Anniversary ❤️</h1>
+
+<div id="message">
+My Dear Wifey ❤️
 </div>
 
-<div class="message">
+<div class="signature">
+Mohd. Shadab ❤️
+</div>
 
-<h2>My Dear Wifey ❤️</h2>
+</div>
+
+<div class="finalScreen" id="finalScreen">
+
+<h1>❤️ Happy Anniversary ❤️</h1>
 
 <p>
-Every beautiful memory we have shared has become a treasure in my heart.
+
+Dear Wifey ❤️
 
 <br><br>
 
-You are not just my wife, you are my best friend, my strength, my peace and the most beautiful blessing in my life.
+You Are My Today,
+
+<br>
+
+My Tomorrow,
+
+<br>
+
+And My Forever.
 
 <br><br>
 
-Through every smile, every challenge, every prayer and every dream, you have made my life more meaningful.
+Forever Yours,
 
 <br><br>
 
-If I had the chance to choose again, I would still choose you.
+Mohd. Shadab ❤️
 
-<br><br>
-
-In every lifetime.<br>
-In every universe.<br>
-Every single time.
-
-<br><br>
-
-Happy Anniversary My Love ❤️
-
-<br><br>
-
-Forever Yours Husband,
-
-<br><br>
-
-<b>Shadab ❤️</b>
 </p>
 
 </div>
-
-<img id="photo" src="photo1.jpg">
 
 </div>
 
 <script>
 
-let photos = [
+const photos = [
+'cover.jpg',
 'photo1.jpg',
 'photo2.jpg',
 'photo3.jpg',
@@ -180,52 +253,123 @@ let photos = [
 'photo14.jpg'
 ];
 
-let current = 0;
+const messages = [
 
-function openCard(){
+"💖 My Dear Wifey ❤️",
 
-document.getElementById('start').style.display='none';
-document.getElementById('content').style.display='block';
+"Every beautiful memory we have shared has become a treasure in my heart.",
 
-document.getElementById('music').play();
+"You are not just my wife.",
+
+"You are my best friend, my strength and my peace.",
+
+"Through every smile and every challenge, you have made my world beautiful.",
+
+"Thank you for every memory, every prayer and every dream we have shared.",
+
+"If I had the chance to choose again...",
+
+"I would still choose you ❤️",
+
+"In every lifetime ❤️",
+
+"In every universe ❤️",
+
+"Every single time ❤️",
+
+"Happy Anniversary My Love ❤️"
+
+];
+
+let photoIndex = 0;
+let msgIndex = 0;
+
+let photoTimer;
+let msgTimer;
+
+function startStory(){
+
+document.getElementById("intro").style.display="none";
+
+document.getElementById("story").style.display="flex";
+
+const music = document.getElementById("music");
+
+music.play().catch(()=>{});
+
+changePhoto();
+changeMessage();
+
+photoTimer = setInterval(changePhoto,5000);
+
+msgTimer = setInterval(changeMessage,7000);
+
+music.onended = function(){
+
+clearInterval(photoTimer);
+clearInterval(msgTimer);
+
+document.getElementById("finalScreen").style.display="flex";
+
+};
 
 }
 
-setInterval(function(){
+function changePhoto(){
 
-current++;
+document.getElementById("story").style.backgroundImage =
+`url('${photos[photoIndex]}')`;
 
-if(current >= photos.length){
-current = 0;
+photoIndex++;
+
+if(photoIndex >= photos.length){
+
+photoIndex = 0;
+
 }
 
-document.getElementById('photo').src = photos[current];
+}
 
-},3000);
+function changeMessage(){
+
+document.getElementById("message").innerHTML =
+messages[msgIndex];
+
+msgIndex++;
+
+if(msgIndex >= messages.length){
+
+msgIndex = messages.length - 1;
+
+}
+
+}
 
 function createHeart(){
 
-let h = document.createElement('div');
+const heart = document.createElement("div");
 
-h.className='heart';
+heart.className = "heart";
 
-h.innerHTML='❤️';
+heart.innerHTML = "❤️";
 
-h.style.left=Math.random()*100+'vw';
+heart.style.left = Math.random()*100 + "vw";
 
-h.style.fontSize=(20+Math.random()*20)+'px';
+heart.style.fontSize =
+(20 + Math.random()*25) + "px";
 
-h.style.animationDuration=(3+Math.random()*5)+'s';
+heart.style.animationDuration =
+(4 + Math.random()*4) + "s";
 
-document.body.appendChild(h);
+document.body.appendChild(heart);
 
-setTimeout(function(){
-h.remove();
+setTimeout(()=>{
+heart.remove();
 },8000);
 
 }
 
-setInterval(createHeart,400);
+setInterval(createHeart,300);
 
 </script>
 
