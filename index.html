@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Anniversary Second Anniverasy Dear Wifey ❤️</title>
+<title>Happy Anniversary Dear Wifey ❤️</title>
 
-<meta property="og:title" content="❤️ A Special Anniversary Surprise For Dear Wifey ❤️">
-<meta property="og:description" content="A Love Letter From Shadab ❤️">
+<meta property="og:title" content="❤️ A Special Anniversary Surprise ❤️">
+<meta property="og:description" content="A Love Letter For Dear Wifey ❤️">
 <meta property="og:image" content="cover.jpg">
 
 <style>
@@ -20,22 +20,23 @@ font-family:'Segoe UI',sans-serif;
 }
 
 body{
-overflow:hidden;
 height:100vh;
+overflow:hidden;
 background:#000;
 color:white;
 }
 
 #intro,
 #story{
-height:100vh;
+position:relative;
 width:100vw;
+height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
+flex-direction:column;
 text-align:center;
-position:relative;
+overflow:hidden;
 }
 
 #intro{
@@ -43,7 +44,7 @@ background:linear-gradient(135deg,#ff4d6d,#4a044e);
 }
 
 .envelope{
-font-size:110px;
+font-size:120px;
 animation:float 2.5s infinite ease-in-out;
 }
 
@@ -54,15 +55,15 @@ transform:translateY(-15px);
 }
 
 .openBtn{
-margin-top:25px;
-padding:15px 35px;
-font-size:18px;
+padding:14px 30px;
+margin-top:20px;
 border:none;
 border-radius:40px;
 background:white;
 color:#e91e63;
-cursor:pointer;
+font-size:18px;
 font-weight:bold;
+cursor:pointer;
 }
 
 #story{
@@ -81,37 +82,62 @@ background:rgba(0,0,0,.55);
 .content{
 position:relative;
 z-index:5;
-padding:20px;
-max-width:90%;
+width:90%;
+max-width:900px;
 }
 
 h1{
-font-size:36px;
+font-size:40px;
 margin-bottom:15px;
 }
 
 #message{
-font-size:22px;
-line-height:1.6;
-min-height:140px;
+font-size:24px;
+line-height:1.8;
+min-height:180px;
+padding:15px;
+font-weight:500;
 }
 
-.signature{
+.controls{
 margin-top:20px;
-font-size:22px;
+}
+
+.controls button{
+padding:10px 20px;
+margin:0 10px;
+border:none;
+border-radius:30px;
+background:white;
+color:#e91e63;
 font-weight:bold;
+cursor:pointer;
 }
 
 .heart{
-position:absolute;
-color:#ff4d6d;
+position:fixed;
+top:-50px;
+z-index:999;
 pointer-events:none;
 animation:fall linear forwards;
+text-shadow:
+0 0 10px #ff4d6d,
+0 0 20px #ff4d6d;
 }
 
 @keyframes fall{
-to{
-transform:translateY(110vh);
+
+0%{
+transform:
+translateY(-50px)
+rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:
+translateY(110vh)
+rotate(360deg);
 opacity:0;
 }
 }
@@ -120,13 +146,13 @@ opacity:0;
 position:absolute;
 inset:0;
 display:none;
-background:rgba(0,0,0,.85);
 justify-content:center;
 align-items:center;
 flex-direction:column;
+background:rgba(0,0,0,.9);
+padding:30px;
 text-align:center;
-padding:20px;
-z-index:100;
+z-index:9999;
 }
 
 .finalScreen h1{
@@ -136,7 +162,7 @@ margin-bottom:20px;
 
 .finalScreen p{
 font-size:24px;
-line-height:1.8;
+line-height:2;
 }
 
 @media(max-width:768px){
@@ -147,6 +173,7 @@ font-size:30px;
 
 #message{
 font-size:20px;
+min-height:220px;
 }
 
 .finalScreen h1{
@@ -158,6 +185,7 @@ font-size:20px;
 }
 
 }
+
 </style>
 </head>
 
@@ -173,9 +201,10 @@ font-size:20px;
 
 <h1>Dear Wifey ❤️</h1>
 
-<p>A Special Anniversary Letter From Shadab</p>
+<p>A Special Anniversary Surprise</p>
 
-<button class="openBtn" onclick="startStory()">
+<button class="openBtn"
+onclick="startStory()">
 Open My Heart ❤️
 </button>
 
@@ -190,18 +219,29 @@ Open My Heart ❤️
 <h1>Happy Anniversary ❤️</h1>
 
 <div id="message">
-My Dear Wifey ❤️
+💌 My Dear Wifey ❤️
 </div>
 
-<div class="signature">
-Mohd. Shadab ❤️
-</div>
+<div class="controls">
+
+<button onclick="prevSlide()">
+⬅ Previous
+</button>
+
+<button onclick="nextSlide()">
+Next ➡
+</button>
 
 </div>
 
-<div class="finalScreen" id="finalScreen">
+</div>
 
-<h1>❤️ Happy Anniversary ❤️</h1>
+<div class="finalScreen"
+id="finalScreen">
+
+<h1>
+❤️ Happy Anniversary ❤️
+</h1>
 
 <p>
 
@@ -209,23 +249,32 @@ Dear Wifey ❤️
 
 <br><br>
 
-You Are My Today,
-
-<br>
-
-My Tomorrow,
-
-<br>
-
-And My Forever.
+Every beautiful memory with you
+has made my life brighter.
 
 <br><br>
 
-Forever Yours,
+You are my today,
+
+my tomorrow,
+
+and my forever.
 
 <br><br>
 
-Mohd. Shadab ❤️
+If I had a thousand lives,
+
+I would choose you
+
+again and again.
+
+<br><br>
+
+Forever Yours husband,
+
+<br><br>
+
+❤️ Shadab ❤️
 
 </p>
 
@@ -236,7 +285,9 @@ Mohd. Shadab ❤️
 <script>
 
 const photos = [
+
 'cover.jpg',
+
 'photo1.jpg',
 'photo2.jpg',
 'photo3.jpg',
@@ -251,23 +302,34 @@ const photos = [
 'photo12.jpg',
 'photo13.jpg',
 'photo14.jpg'
+
 ];
 
 const messages = [
 
-"💖 My Dear Wifey ❤️",
+"💌 My Dear Wifey ❤️",
 
 "Every beautiful memory we have shared has become a treasure in my heart.",
 
+"Your smile brightens even my darkest days.",
+
 "You are not just my wife.",
 
-"You are my best friend, my strength and my peace.",
+"You are my safest place.",
 
-"Through every smile and every challenge, you have made my world beautiful.",
+"My best friend.",
 
-"Thank you for every memory, every prayer and every dream we have shared.",
+"My strength.",
 
-"If I had the chance to choose again...",
+"My happiness.",
+
+"My biggest blessing.",
+
+"You make ordinary moments magical.",
+
+"Thank you for every smile and every memory.",
+
+"If I could choose again...",
 
 "I would still choose you ❤️",
 
@@ -287,29 +349,67 @@ let msgIndex = 0;
 let photoTimer;
 let msgTimer;
 
+function typeText(text){
+
+const el =
+document.getElementById("message");
+
+el.innerHTML = "";
+
+let i = 0;
+
+let timer =
+setInterval(function(){
+
+if(i < text.length){
+
+el.innerHTML +=
+text.charAt(i);
+
+i++;
+
+}else{
+
+clearInterval(timer);
+
+}
+
+},40);
+
+}
+
 function startStory(){
 
-document.getElementById("intro").style.display="none";
+document.getElementById("intro")
+.style.display="none";
 
-document.getElementById("story").style.display="flex";
+document.getElementById("story")
+.style.display="flex";
 
-const music = document.getElementById("music");
+let music =
+document.getElementById("music");
 
 music.play().catch(()=>{});
 
 changePhoto();
-changeMessage();
 
-photoTimer = setInterval(changePhoto,5000);
+typeText(messages[0]);
 
-msgTimer = setInterval(changeMessage,7000);
+photoTimer =
+setInterval(changePhoto,5000);
+
+msgTimer =
+setInterval(nextMessage,7000);
 
 music.onended = function(){
 
 clearInterval(photoTimer);
+
 clearInterval(msgTimer);
 
-document.getElementById("finalScreen").style.display="flex";
+document.getElementById(
+"finalScreen"
+).style.display="flex";
 
 };
 
@@ -317,7 +417,9 @@ document.getElementById("finalScreen").style.display="flex";
 
 function changePhoto(){
 
-document.getElementById("story").style.backgroundImage =
+document.getElementById(
+"story"
+).style.backgroundImage =
 `url('${photos[photoIndex]}')`;
 
 photoIndex++;
@@ -330,10 +432,7 @@ photoIndex = 0;
 
 }
 
-function changeMessage(){
-
-document.getElementById("message").innerHTML =
-messages[msgIndex];
+function nextMessage(){
 
 msgIndex++;
 
@@ -343,33 +442,78 @@ msgIndex = messages.length - 1;
 
 }
 
+typeText(messages[msgIndex]);
+
+}
+
+function nextSlide(){
+
+changePhoto();
+
+nextMessage();
+
+}
+
+function prevSlide(){
+
+photoIndex--;
+
+if(photoIndex < 0){
+
+photoIndex =
+photos.length-1;
+
+}
+
+document.getElementById(
+"story"
+).style.backgroundImage =
+`url('${photos[photoIndex]}')`;
+
 }
 
 function createHeart(){
 
-const heart = document.createElement("div");
+const heart =
+document.createElement("div");
 
-heart.className = "heart";
+heart.className="heart";
 
-heart.innerHTML = "❤️";
+const hearts=[
+"❤️",
+"💖",
+"💕",
+"💘",
+"💝"
+];
 
-heart.style.left = Math.random()*100 + "vw";
+heart.innerHTML=
+hearts[
+Math.floor(
+Math.random()*hearts.length
+)
+];
+
+heart.style.left =
+Math.random()*100+"vw";
 
 heart.style.fontSize =
-(20 + Math.random()*25) + "px";
+(20+Math.random()*30)+"px";
 
 heart.style.animationDuration =
-(4 + Math.random()*4) + "s";
+(4+Math.random()*5)+"s";
 
-document.body.appendChild(heart);
+document.body.appendChild(
+heart
+);
 
 setTimeout(()=>{
 heart.remove();
-},8000);
+},9000);
 
 }
 
-setInterval(createHeart,300);
+setInterval(createHeart,180);
 
 </script>
 
